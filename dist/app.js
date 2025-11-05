@@ -42,7 +42,7 @@ class VehicleService {
         this.items.push(item);
     }
     get list() {
-        return this.items;
+        return [...this.items];
     }
 }
 const cars = new VehicleService();

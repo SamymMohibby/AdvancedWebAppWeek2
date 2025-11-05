@@ -77,7 +77,7 @@ class VehicleService <T> {
         this.items.push(item)
     }
     get list(): readonly T[] {
-        return this.items
+        return [...this.items]
     }
     
 }
