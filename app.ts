@@ -66,21 +66,22 @@ console.log(carOne)
 console.log(planeOne)
 console.log(boatOne)
 
-class VehicleService <T> {
-    private items: T[];
+class VehicleService<T> {
+  private readonly items: T[];   // prevents reassigning the array reference
 
-    constructor(items: T[] = []) {
-        this.items = items;
+  constructor(items: T[] = []) {
+    this.items = items;
   }
-    
-    add(item:T):void {
-        this.items.push(item)
-    }
-    get list(): readonly T[] {
-        return [...this.items]
-    }
-    
+
+  add(item: T): void {
+    this.items.push(item);
+  }
+
+  list(): readonly T[] {         // expose as read-only view
+    return this.items;
+  }
 }
+
 
 
 const cars = new VehicleService<ICar>()
@@ -89,5 +90,5 @@ const boats = new VehicleService<IBoat>()
 cars.add(carOne)
 boats.add(boatOne)
 
-console.log(cars.list)
-console.log(boats.list)
+console.log(cars.list())
+console.log(boats.list())

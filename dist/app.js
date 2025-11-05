@@ -34,21 +34,21 @@ console.log(carOne);
 console.log(planeOne);
 console.log(boatOne);
 class VehicleService {
-    items;
+    items; // prevents reassigning the array reference
     constructor(items = []) {
         this.items = items;
     }
     add(item) {
         this.items.push(item);
     }
-    get list() {
-        return [...this.items];
+    list() {
+        return this.items;
     }
 }
 const cars = new VehicleService();
 const boats = new VehicleService();
 cars.add(carOne);
 boats.add(boatOne);
-console.log(cars.list);
-console.log(boats.list);
+console.log(cars.list());
+console.log(boats.list());
 //# sourceMappingURL=app.js.map
