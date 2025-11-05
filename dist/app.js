@@ -35,7 +35,7 @@ console.log(planeOne);
 console.log(boatOne);
 class VehicleService {
     items;
-    constructor(items) {
+    constructor(items = []) {
         this.items = items;
     }
     add(item) {
@@ -45,8 +45,8 @@ class VehicleService {
         return this.items;
     }
 }
-const cars = new VehicleService([]);
-const boats = new VehicleService([]);
+const cars = new VehicleService();
+const boats = new VehicleService();
 cars.add(carOne);
 boats.add(boatOne);
 console.log(cars.list());

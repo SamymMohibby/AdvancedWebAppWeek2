@@ -67,7 +67,11 @@ console.log(planeOne)
 console.log(boatOne)
 
 class VehicleService <T> {
-    constructor(private items: T[]) {}
+    private items: T[];
+
+    constructor(items: T[] = []) {
+        this.items = items;
+  }
     
     add(item:T):void {
         this.items.push(item)
@@ -77,8 +81,8 @@ class VehicleService <T> {
     }
 }
 
-const cars = new VehicleService<ICar>([])
-const boats = new VehicleService<IBoat>([])
+const cars = new VehicleService<ICar>()
+const boats = new VehicleService<IBoat>()
 
 cars.add(carOne)
 boats.add(boatOne)
