@@ -72,7 +72,7 @@ class VehicleService <T> {
     add(item:T):void {
         this.items.push(item)
     }
-    list() {
+    list(): T[] {
         return this.items
     }
 }
