@@ -41,7 +41,7 @@ class VehicleService {
     add(item) {
         this.items.push(item);
     }
-    list() {
+    get list() {
         return this.items;
     }
 }
@@ -49,6 +49,6 @@ const cars = new VehicleService();
 const boats = new VehicleService();
 cars.add(carOne);
 boats.add(boatOne);
-console.log(cars.list());
-console.log(boats.list());
+console.log(cars.list);
+console.log(boats.list);
 //# sourceMappingURL=app.js.map
