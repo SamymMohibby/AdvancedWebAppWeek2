@@ -9,7 +9,7 @@ let vehicleOne = {
 };
 console.log(vehicleOne);
 let carOne = {
-    model: "Ford Focus",
+    model: "Ford focus",
     color: "Green",
     year: 2016,
     power: 150,
@@ -41,14 +41,15 @@ class VehicleService {
     add(item) {
         this.items.push(item);
     }
-    list() {
+    get list() {
         console.log(this.items);
+        return this.items;
     }
 }
 const cars = new VehicleService([]);
 const boats = new VehicleService([]);
 cars.add(carOne);
 boats.add(boatOne);
-cars.list();
-boats.list();
+cars.list;
+boats.list;
 //# sourceMappingURL=app.js.map
