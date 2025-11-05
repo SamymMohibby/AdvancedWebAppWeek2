@@ -38,7 +38,7 @@ interface IPlane extends IVehicle {
 }
 
 let carOne: ICar = {
-    model: "Ford Focus",
+    model: "Ford focus",
     color: "Green",
     year: 2016,
     power: 150,
