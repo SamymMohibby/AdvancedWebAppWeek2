@@ -73,7 +73,6 @@ class VehicleService <T> {
         this.items.push(item)
     }
     get list() {
-        console.log(this.items)
         return this.items
     }
 }
