@@ -72,7 +72,7 @@ class VehicleService <T> {
     add(item:T):void {
         this.items.push(item)
     }
-    get list() {
+    list() {
         return this.items
     }
 }
@@ -83,6 +83,5 @@ const boats = new VehicleService<IBoat>([])
 cars.add(carOne)
 boats.add(boatOne)
 
-cars.list
-boats.list
-
+console.log(cars.list())
+console.log(boats.list())
