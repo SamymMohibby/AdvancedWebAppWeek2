@@ -34,12 +34,13 @@ console.log(carOne);
 console.log(planeOne);
 console.log(boatOne);
 class VehicleService {
-    items; // prevents reassigning the array reference
+    items;
     constructor(items = []) {
         this.items = items;
     }
     add(item) {
         this.items.push(item);
+        return this.items;
     }
     list() {
         return this.items;
