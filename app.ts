@@ -67,12 +67,8 @@ console.log(planeOne)
 console.log(boatOne)
 
 class VehicleService <T> {
-    private items: T[];
+    private items: T[] = [];
 
-    constructor(items: T[] = []) {
-        this.items = items;
-  }
-    
     add(item:T): T[] {
         this.items.push(item)
         return this.items

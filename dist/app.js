@@ -34,10 +34,7 @@ console.log(carOne);
 console.log(planeOne);
 console.log(boatOne);
 class VehicleService {
-    items;
-    constructor(items = []) {
-        this.items = items;
-    }
+    items = [];
     add(item) {
         this.items.push(item);
         return this.items;
