@@ -69,14 +69,12 @@ console.log(boatOne)
 class VehicleService <T> {
     private items: T[] = [];
 
-    add(item:T): T {
+    add(item: T): void {
         this.items.push(item)
-        return item
     }
     list():T[] {
         return this.items
     }
-    
 }
 
 
